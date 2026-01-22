@@ -19,7 +19,7 @@ const sheetName ="nifty data"
 const app = express();
 const PORT = 80;
 //const HOSTNAME= 'ganesantrade'
-const HOSTNAME= 'localhost'
+const HOSTNAME= 'ec2-3-110-156-31.ap-south-1.compute.amazonaws.com'
 // Middleware to parse incoming JSON requests
 app.use(bodyParser.json());
 
@@ -135,5 +135,6 @@ app.get("/sample", (req, res) => {
   res.send(msg);
 
 });
+
 
 
