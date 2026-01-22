@@ -1,7 +1,7 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const http = require('http');
+const https = require('https');
 
 //Excel file creation
 const ExcelJS = require("exceljs");
@@ -18,7 +18,7 @@ const sheetName ="nifty data"
 
 const app = express();
 const PORT = 80;
-const HOSTNAME= 'ganesantrade'
+//const HOSTNAME= 'ganesantrade'
 // Middleware to parse incoming JSON requests
 app.use(bodyParser.json());
 
@@ -132,4 +132,5 @@ app.get("/sample", (req, res) => {
   // axios.post("https://api.broker.com/order", req.body);
 
   res.send(msg);
+
 });
